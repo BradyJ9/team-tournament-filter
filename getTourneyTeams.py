@@ -3,15 +3,12 @@ import os
 import csv
 
 if not len(sys.argv) > 2:
-    print("ERROR...USAGE: <year> <.csv file>")
-    #exit()
+    print("ERROR...USAGE: <.csv file> <year>")
+    exit()
 
-#csv_file= sys.argv[1]
+csv_file= sys.argv[1]
 
-#year = sys.argv[2]
-
-csv_file = 'raw_2011teams.csv'
-year = '2011'
+year = sys.argv[2]
 
 if os.path.exists(year + "team_data.csv"):
     os.remove(year + "team_data.csv")
